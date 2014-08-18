@@ -1,0 +1,5 @@
+.DS_Store
+*.swiftmodule
+*.swiftdoc
+*.o
+*.dylib

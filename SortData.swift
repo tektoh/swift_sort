@@ -1,26 +1,27 @@
 import Foundation
 
-class SortData {
+public class SortData {
 
   var data: [Int]
-  var count: Int {
+  
+  public var count: Int {
     get {
       return self.data.count
     }
   }
 
-  init(count: Int = 20) {
+  public init(count: Int = 20) {
     self.data = [Int]()
     for _ in 1...count {
       self.data.append(Int(arc4random() % UInt32(count)) + 1)
     }
   }
 
-  func get(i: Int) -> Int {
+  public func get(i: Int) -> Int {
     return self.data[i]
   }
 
-  func swap(a: Int, b: Int) {
+  public func swap(a: Int, b: Int) {
     let tmp = self.data[a]
     self.data[a] = self.data[b]
     self.data[b] = tmp
@@ -29,7 +30,7 @@ class SortData {
     usleep(100000)
   }
 
-  func printData() {
+  public func printData() {
     var bar: String = ""
     for var i: Int = 0; i < self.count; i++ {
       bar = ""
