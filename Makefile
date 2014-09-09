@@ -1,5 +1,5 @@
-OSX_VERSION = 10.9
-XCODE_VERSION = Xcode6-Beta5
+OSX_VERSION = 10.10
+XCODE_VERSION = Xcode6-Beta7
 XCODE = /Applications/$(XCODE_VERSION).app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
 SWIFT = $(XCODE)/usr/bin/swift
 SWIFTC = $(XCODE)/usr/bin/swiftc
@@ -29,5 +29,6 @@ SortData.swiftmodule SortData.swiftdoc: SortData.swift
 		-emit-module-doc-path SortData.swiftdoc \
 		-sdk $(SDKROOT) \
 		SortData.swift
+
 clean:
-	rm -f SortData.swiftmodule　SortData.swiftdoc SortData.o libSortData.dylib
+	rm -f SortData.swiftmodule SortData.swiftdoc SortData.o libSortData.dylib
